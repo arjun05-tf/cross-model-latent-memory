@@ -33,7 +33,7 @@ def extract_memory(hidden_states, layer=-1):
 if __name__ == "__main__":
     tokenizer, model = load_model()
 
-    text = "Anuj is the worst nigga."
+    text = "Alice lives in Berlin."
 
     hidden_states = extract_hidden_states(model, tokenizer, text)
     memory = extract_memory(hidden_states)
@@ -43,6 +43,7 @@ if __name__ == "__main__":
     #     print(f"Layer {i}: {hidden_state.shape}")
 
     print(f"Memory shape: {memory.shape}")
+    print("Memory: ", memory)
 
 
     # print("Model loaded")
