@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Envs
+venv/
+.venv/
+env/
+ENV/
+
+# Caches
+.cache/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
