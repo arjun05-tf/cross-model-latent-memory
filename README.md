@@ -1,7 +1,7 @@
 # Cross-Model Latent Memory Transfer (CMLMT)
 
-**Author:** Arjun Vinod Patil
-**Status:** Active Research / Experimental Setup
+**Author:** Arjun Vinod Patil  
+**Status:** Active Research / Experimental Setup  
 **License:** MIT
 
 ---
