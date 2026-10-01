@@ -84,7 +84,7 @@ How much task-relevant factual and compositional information can be extracted fr
                                                                                  │
                                                                                  ▼
                                                    ┌─────────────────┐     ┌──────────────────┐
-                                                   │ 6. Quantitative │ ◄── │ 5. Target       │
+                                                   │ 6. Quantitative │ ◄── │ 5. Target        │
                                                    │    Evaluation   │     │    Injection     │
                                                    └─────────────────┘     └──────────────────┘
 ```
