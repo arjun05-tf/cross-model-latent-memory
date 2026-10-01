@@ -1,7 +1,7 @@
 # Cross-Model Latent Memory Transfer (CMLMT)
 
-**Author:** Arjun Vinod Patil
-**Status:** Active Research / Experimental Setup
+**Author:** Arjun Vinod Patil & Anuj Dalvi  
+**Status:** Active Research / Experimental Setup  
 **License:** MIT
 
 ---
@@ -84,12 +84,12 @@ How much task-relevant factual and compositional information can be extracted fr
                                                                                  │
                                                                                  ▼
                                                    ┌─────────────────┐     ┌──────────────────┐
-                                                   │ 6. Quantitative │ ◄── │ 5. Target       │
+                                                   │ 6. Quantitative │ ◄── │ 5. Target        │
                                                    │    Evaluation   │     │    Injection     │
                                                    └─────────────────┘     └──────────────────┘
 ```
 
-### Step 1 — Source Model & Activation Extraction
+### Step 1: Source Model & Activation Extraction
 
 Select lightweight, locally runnable open-weight SLMs (100M–500M parameters) so that internal activations can be inspected without heavy infrastructure:
 
@@ -97,7 +97,7 @@ Select lightweight, locally runnable open-weight SLMs (100M–500M parameters) s
 * Multi-Head Attention key/value matrices
 * MLP intermediate activations
 
-### Step 2 — Controlled Benchmark Dataset
+### Step 2: Controlled Benchmark Dataset
 
 To separate memory retrieval from information already present in the model, the evaluation will use synthetic key-value environments alongside modified factual benchmarks:
 
@@ -108,7 +108,7 @@ To separate memory retrieval from information already present in the model, the 
 | **Paraphrased Queries**  | *"Where does Alice reside?"* vs *"What is Alice's city?"*                | Effect of query wording             |
 | **Conflicting Facts**    | `Fact T1: Alice lives in Berlin` vs `Fact T2: Alice moved to Kyoto`      | Updating and overriding information |
 
-### Step 3 — Baseline Comparisons
+### Step 3: Baseline Comparisons
 
 CMLMT is evaluated against five setups:
 
@@ -126,7 +126,7 @@ CMLMT is evaluated against five setups:
 5. **Latent Transfer (Ours):** $[\text{Query} + \text{Compressed Memory } M] \rightarrow \text{Target Model} \rightarrow \text{Answer}$
    The main experimental setup.
 
-### Step 4 — Memory Extraction & Compression
+### Step 4: Memory Extraction & Compression
 
 Let $H_l$ denote the activation tensor at layer $l$ produced by the source model when reading context $C$.
 
@@ -144,7 +144,7 @@ Several extraction methods will be tested:
 
 * **Autoencoded Representations:** Compressing activations using a trained Sparse Autoencoder (SAE).
 
-### Step 5 — Context Isolation
+### Step 5: Context Isolation
 
 Before evaluating the target model:
 
@@ -154,7 +154,7 @@ Before evaluating the target model:
 
 The target model should only have access to the query $Q$ and extracted memory $M$.
 
-### Step 6 — Target Decoding & Evaluation
+### Step 6: Target Decoding & Evaluation
 
 The target model receives only the query $Q$ and compressed memory $M$.
 
